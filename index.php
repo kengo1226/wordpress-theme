@@ -15,26 +15,28 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<section class="blog">
+    <main class="ly_cont_main">
+        <div class="ly_cont_card bl_cardUnit bl_cardUnit__col3">
+            <?php
+					if ( have_posts() ) : 
+						
+						while ( have_posts() ) : the_post();
 
-		<?php
-		if ( have_posts() ) :
+							get_template_part( 'template-parts/content');
+            
+             endwhile;
+            
+          else :
+            
+			        get_template_part( 'template-parts/content', 'none' );
+            
+          endif;
+				?>
+        </div>
 
-			<div>
-				<?php
-				if(have_posts()) :
-					while(hav_posts()) : the_post();
-					get_template_part('templete-parts/content');
-				endwhile;
-			else:
-				get_template_part('templete-parts/content', 'none');
-			endif;
-			</div>
-
-		endif;
-		?>
-
-	</main>
+    </main>
+    </section>
 
 <?php
 get_sidebar();
