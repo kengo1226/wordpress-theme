@@ -1,0 +1,53 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+img {
+	width: 100%;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+#masthead {
+	background: lightgray;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 25px;
+}
+
+/* ＝＝＝＝＝＝＝　TOP　＝＝＝＝＝＝＝＝＝ */
+.hero {
+	background: rgb(179, 179, 179);
+	color: #fff;
+	text-align: center;
+	height: 500px;
+}
+
+
+.subHero {
+	background: rgb(179, 179, 179);
+	color: #fff;
+	text-align: center;
+	height: 350px;
+}
+
+/* --------- blog ---------- */
+.ly_cont_card {
+	display: flex;
+	justify-content: space-between;
+}
+
+.bl_card {
+	border: 1px solid lightgray;
+	width: 300px;
+}
