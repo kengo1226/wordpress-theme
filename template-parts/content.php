@@ -10,7 +10,7 @@
 ?>
 
 <article class="bl_card">
-    <a href="<?php the_permalink(); ?>" class="bl_card_link">
+    <a href="/blog/<?php the_permalink(); ?>" class="bl_card_link">
         <figure class="bl_card_imgWrapper">
             <img src="<?php the_post_thumbnail_url(); ?>" alt="">
         </figure>
