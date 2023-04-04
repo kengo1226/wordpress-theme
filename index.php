@@ -15,8 +15,8 @@
 get_header();
 ?>
 
-<section class="blog">
-    <main class="ly_cont_main">
+
+<main class="ly_cont_main">
         <div class="ly_cont_card bl_cardUnit bl_cardUnit__col3">
             <?php
 					if ( have_posts() ) : 
@@ -34,9 +34,18 @@ get_header();
           endif;
 				?>
         </div>
+        <?php the_posts_pagination(
+            array(
+                'mid_size'      => 2,
+                'prev_next'     => true,
+                'prev_text'     => __( '前へ'),
+                'next_text'     => __( '次へ'),
+                'type'          => 'list',
+                )
+        ); ?>
 
     </main>
-    </section>
+
 
 <?php
 get_sidebar();
